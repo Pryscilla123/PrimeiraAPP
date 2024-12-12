@@ -13,6 +13,7 @@
     <!--Utilizando html tag helpers <partial name="_MenuLayout" />-->
 
     @await Html.PartialAsync("_MenuLayout")
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -22,6 +23,9 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2024 - PrimeiraApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+            @* @await Component.InvokeAsync("SaudacaoAluno") *@
+            <vc:saudacao-aluno idade="10"/>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
